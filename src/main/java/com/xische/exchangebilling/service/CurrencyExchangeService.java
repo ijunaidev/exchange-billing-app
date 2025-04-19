@@ -33,11 +33,11 @@ public class CurrencyExchangeService {
             Map<String, Double> rates = ((Map<String, Double>) response.get("conversion_rates"))
                     .entrySet().stream()
                     .collect(Collectors.toMap(
-                            entry -> entry.getKey().toUpperCase(),  // normalize keys
+                            entry -> entry.getKey().toUpperCase(),
                             Map.Entry::getValue
                     ));
 
-            return rates.getOrDefault(to.toUpperCase(), 1.0); // normalize lookup
+            return rates.getOrDefault(to.toUpperCase(), 1.0);
         }
 
         return 1.0;

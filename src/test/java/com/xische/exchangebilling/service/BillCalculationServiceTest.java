@@ -167,10 +167,10 @@ public class BillCalculationServiceTest {
     void testNegativeDiscountHandledGracefully() {
         BillRequest request = buildRequest(300, 100, "USD", "EUR", UserType.AFFILIATE, 2);
 
-        when(discountService.applyDiscount(any(), any())).thenReturn(-50.0); // should not happen normally
+        when(discountService.applyDiscount(any(), any())).thenReturn(-50.0);
         when(currencyService.getExchangeRate("USD", "EUR")).thenReturn(0.9);
 
         BillResponse response = billCalculationService.calculate(request);
-        assertEquals(-45.0, response.getNetPayable()); // still handled
+        assertEquals(-45.0, response.getNetPayable());
     }
 }

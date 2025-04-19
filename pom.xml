@@ -105,7 +105,7 @@
                     <execution>
                         <phase>validate</phase>
                         <goals>
-                            <goal>checkstyle</goal> <!-- this generates the HTML -->
+                            <goal>checkstyle</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -113,7 +113,7 @@
                     <configLocation>custom_checks.xml</configLocation>
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
-                    <failsOnError>false</failsOnError> <!-- set to false if you want to ignore violations -->
+                    <failsOnError>false</failsOnError>
                 </configuration>
             </plugin>
             <plugin>

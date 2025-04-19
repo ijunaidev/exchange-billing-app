@@ -49,7 +49,7 @@ public class CurrencyExchangeServiceTest {
     @Test
     void testMissingTargetCurrencyReturnsDefaultOne() {
         Map<String, Double> rates = new HashMap<>();
-        rates.put("INR", 82.0); // EUR not included
+        rates.put("INR", 82.0);
 
         Map<String, Object> response = new HashMap<>();
         response.put("conversion_rates", rates);
@@ -110,7 +110,6 @@ public class CurrencyExchangeServiceTest {
 
     @Test
     void testApiUrlIsBuiltCorrectly() {
-        // This test would be better in an integration test, but we can confirm the call happens
         Map<String, Object> response = new HashMap<>();
         response.put("conversion_rates", Map.of("EUR", 0.8));
         when(restTemplate.getForObject(contains("USD"), eq(Map.class))).thenReturn(response);
