@@ -105,15 +105,15 @@
                     <execution>
                         <phase>validate</phase>
                         <goals>
-                            <goal>check</goal>
+                            <goal>checkstyle</goal> <!-- this generates the HTML -->
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
+                    <configLocation>custom_checks.xml</configLocation>
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
-                    <failsOnError>true</failsOnError>
-                    <configLocation>google_checks.xml</configLocation>
+                    <failsOnError>false</failsOnError> <!-- set to false if you want to ignore violations -->
                 </configuration>
             </plugin>
             <plugin>

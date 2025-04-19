@@ -54,12 +54,18 @@ mvn test
 1. Checkstyle Report
 ```bash
 mvn checkstyle:check
+mvn checkstyle:checkstyle
 ```
+### Output folder:
+`target/site/checkstyle.html`
+
 
 2. Coverage Report (JaCoCo)
 ```bash
 mvn clean verify
 ```
+### Output folder:
+`target/site/jacoco/index.html`
 
 ## 👨‍💻 CURLs
 
